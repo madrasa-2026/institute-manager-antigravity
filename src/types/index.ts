@@ -8,7 +8,7 @@ export interface User {
     image?: string;
 }
 
-export interface SessionUser extends User {
+export interface SessionUser extends Omit<User, "role"> {
     role: string;
 }
 

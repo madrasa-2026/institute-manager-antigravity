@@ -56,7 +56,7 @@ export const authOptions: NextAuthOptions = {
                     name: user.profile
                         ? `${user.profile.firstName} ${user.profile.lastName}`
                         : user.email,
-                    image: user.profile?.photo,
+                    image: user.profile?.photo || undefined,
                 };
             },
         }),
